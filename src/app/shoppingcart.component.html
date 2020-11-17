@@ -1,0 +1,11 @@
+<p>shoppingcart works!</p>
+<h1>Please Select</h1>
+<table>
+    <tr *ngFor="let item of list">
+        <td>
+            <img src="{{item.img}}" alt="">
+            <p>{{item.name}}</p>
+            <button name="{{item.name}}" (click)="onClick($event)"> Add </button>
+        </td>
+    </tr>
+</table>

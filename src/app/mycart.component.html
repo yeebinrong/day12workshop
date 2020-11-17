@@ -1,0 +1,17 @@
+<p>mycart works!</p>
+
+<h1>My cart!</h1>
+
+<div *ngIf="myCart.length <=0">
+    Your cart is empty!
+</div>
+
+<table *ngIf="myCart.length > 0">
+    <tr *ngFor="let item of myCart">
+        <td>
+            <img src="{{item.img}}" alt="">
+            <p>{{item.name}} Quantity: {{item.quantity}}</p>
+            <button name="{{item.name}}" (click)="onClick($event)"> Remove </button>
+        </td>
+    </tr>
+</table>
